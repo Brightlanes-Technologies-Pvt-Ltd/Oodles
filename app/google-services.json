@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "767997203689",
+    "project_id": "android-notif-basix-app",
+    "storage_bucket": "android-notif-basix-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:767997203689:android:e846bb1373fc5cde2d4c78",
+        "android_client_info": {
+          "package_name": "com.ias.gsscore"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "767997203689-aokbbbalsikfnfcl3lovpp4ldcpfekmc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAm-fHhwzBPu9NUG49dSgAzP90OkPqgq-c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "767997203689-aokbbbalsikfnfcl3lovpp4ldcpfekmc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

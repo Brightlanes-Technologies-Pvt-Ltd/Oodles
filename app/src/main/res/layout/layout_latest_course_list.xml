@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/mainLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/curve_stroke_transparent"
+        android:backgroundTint="@color/green"
+        android:layout_margin="5dp">
+        <LinearLayout
+            android:id="@+id/secondLayout"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:background="@drawable/bg_dummy"
+            android:orientation="vertical">
+
+            <com.ias.gsscore.utils.CustomTextView
+                android:id="@+id/tvCourseTitle"
+                style="@style/Poppins_Medium"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginVertical="8dp"
+                android:layout_marginHorizontal="3dp"
+                android:layout_weight="1"
+                android:text="NCERT Revision Test Series"
+                android:textColor="@color/green"
+                android:layout_marginTop="8dp"
+                android:textSize="12sp"/>
+
+            <LinearLayout
+                android:id="@+id/viewDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_latest_course_half"
+                android:layout_marginBottom="12dp">
+
+                <com.ias.gsscore.utils.CustomTextView
+                    style="@style/Poppins_Medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="View Details"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:textColor="@color/white"
+                    android:layout_marginHorizontal="2dp"
+                    android:textSize="11sp"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

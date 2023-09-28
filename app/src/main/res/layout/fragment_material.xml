@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/topLayout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:background="@color/blue_text"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:id="@+id/rvMaterialTop"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/row_top_material" />
+
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/mm_lay"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:weightSum="1"
+            android:visibility="gone"
+            android:orientation="horizontal">
+
+            <com.ias.gsscore.utils.CustomTextView
+                android:id="@+id/title"
+                style="@style/Poppins_Medium"
+                android:layout_width="0dp"
+                android:layout_weight="0.6"
+                android:layout_height="30dp"
+                android:paddingLeft="10dp"
+                android:gravity="center_vertical"
+                android:textColor="@color/light_text_color"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:id="@+id/filter_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/curve_grey_stroke"
+                android:layout_weight="0.4">
+
+            <Spinner
+                android:id="@+id/filter"
+                style="@style/Poppins_Medium"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="right"
+                android:paddingRight="10dp"
+                android:textSize="14sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/date_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:weightSum="3">
+
+            <RelativeLayout
+                android:id="@+id/start"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+
+                android:layout_weight="1"
+                android:layout_marginRight="10dp">
+
+                <com.ias.gsscore.utils.CustomTextView
+                    android:id="@+id/start_date"
+                    style="@style/Poppins_Regular"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/curve_grey_stroke"
+                    android:gravity="center_vertical"
+                    android:hint="From Date"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+
+                    android:src="@drawable/ic_calender_small" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/end"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:layout_marginRight="10dp">
+
+                <com.ias.gsscore.utils.CustomTextView
+                    android:id="@+id/end_date"
+                    style="@style/Poppins_Regular"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/curve_grey_stroke"
+                    android:gravity="center_vertical"
+                    android:hint="To Date"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+
+                    android:src="@drawable/ic_calender_small" />
+
+            </RelativeLayout>
+
+            <com.ias.gsscore.utils.CustomTextView
+                android:id="@+id/apply"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:text="Apply"
+
+                android:background="@drawable/curve_blue_solid"/>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/rootContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"/>
+
+     <!--   <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvResourceList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:overScrollMode="never"
+            android:paddingVertical="8dp" />-->
+
+
+    </LinearLayout>
+</layout>

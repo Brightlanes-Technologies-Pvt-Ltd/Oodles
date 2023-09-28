@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewmodel"
+            type="com.ias.gsscore.ui.viewmodel.FilterViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/layout1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="0.5"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <com.ias.gsscore.utils.CustomTextView
+                    style="@style/Poppins_Medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Filters"
+                    android:textColor="#000"
+                    android:textSize="16sp" />
+
+
+            </LinearLayout>
+
+
+            <com.ias.gsscore.utils.CustomTextView
+                style="@style/Poppins_Medium"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="0.5"
+                android:gravity="right"
+                android:text="Clear All"
+                android:textColor="@color/blue_text"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/layout2"
+            android:layout_below="@+id/layout1"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#000" />
+
+        <LinearLayout
+            android:id="@+id/filter_layout"
+            android:layout_below="@+id/layout2"
+            android:layout_above="@+id/apply_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvParent"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:layout_weight="0.4"
+                android:adapter="@{viewmodel.courseFilterParentAdapter}"
+                android:background="#50e2e2e2"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:itemCount="4"
+                tools:listitem="@layout/layout_item_filter_parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvChild"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.6"
+                android:adapter="@{viewmodel.courseFilterChildAdapter}"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:itemCount="4"
+                tools:listitem="@layout/layout_item_filter_child" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/apply_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="#fff"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#c2c2c2" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
+                    android:gravity="center_vertical"
+                    android:onClick="@{()->viewmodel.clearAll()}"
+                    android:orientation="vertical">
+
+                    <com.ias.gsscore.utils.CustomTextView
+                        android:id="@+id/filter_count"
+                        style="@style/Poppins_Medium"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="CLOSE"
+                        android:textColor="#000"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/grey_text" />
+
+                <com.ias.gsscore.utils.CustomTextView
+                    android:id="@+id/btn_apply"
+                    style="@style/Poppins_Medium"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:onClick="@{()->viewmodel.funApply()}"
+                    android:text="Apply"
+                    android:textColor="@color/blue_text"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>

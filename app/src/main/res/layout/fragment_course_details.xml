@@ -1,0 +1,675 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/light_grey">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_above="@+id/bottomLayout"
+            android:id="@+id/nestedScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/playVideo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/ivImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:scaleType="fitXY"
+                        tools:src="@drawable/dummy_image9" />
+
+                    <LinearLayout
+                        android:id="@+id/btPlay"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true">
+
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_play_pause_white" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/ivImage">
+
+                        <ProgressBar
+                            android:layout_width="match_parent"
+                            android:layout_height="3dp"
+                            android:background="@color/grey"
+                            android:progress="30" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardElevation="2dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:orientation="vertical">
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:id="@+id/item_layout"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:gravity="center_vertical"
+                                        android:orientation="vertical">
+
+                                        <com.ias.gsscore.utils.CustomTextView
+                                            android:id="@+id/tvCourseTitle"
+                                            style="@style/Poppins_Regular"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textColor="@color/blue_text"
+                                            android:textSize="14sp"
+                                            tools:text="GS SCORE: IAS FOUNDATION 2023" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:gravity="center_vertical"
+                                        android:visibility="gone">
+
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:background="@drawable/curve_blue_solid_grey_stroke"
+                                            android:padding="5dp">
+
+                                            <com.ias.gsscore.utils.CustomTextView
+                                                style="@style/Poppins_Regular"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="GS Prelims+Mains"
+                                                android:textColor="@color/blue_text"
+                                                android:textSize="12sp" />
+
+                                        </LinearLayout>
+
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="5dp"
+                                            android:background="@drawable/curve_blue_solid_grey_stroke"
+                                            android:padding="5dp">
+
+                                            <com.ias.gsscore.utils.CustomTextView
+                                                style="@style/Poppins_Regular"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="Mode : Offline &amp; Online"
+                                                android:textColor="@color/blue_text"
+                                                android:textSize="12sp" />
+
+
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                                <WebView
+                                    android:id="@+id/tvCourseDesc"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    tools:ignore="WebViewLayout" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:padding="5dp">
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:gravity="center_vertical">
+
+                                        <LinearLayout
+                                            android:layout_width="30dp"
+                                            android:layout_height="30dp"
+                                            android:background="@drawable/curve_blue_solid_grey_stroke"
+                                            android:gravity="center"
+                                            android:padding="5dp">
+
+                                            <ImageView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:src="@drawable/ic_calender_small"
+                                                app:tint="@color/blue_text" />
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="5dp"
+                                            android:gravity="center_vertical"
+                                            android:orientation="vertical">
+
+                                            <com.ias.gsscore.utils.CustomTextView
+                                                android:id="@+id/tvBatchStartDate"
+                                                style="@style/Poppins_Regular"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:textColor="@color/blue_text"
+                                                android:textSize="12sp"
+                                                tools:text="Start From 19 Feb" />
+
+                                            <com.ias.gsscore.utils.CustomTextView
+                                                android:id="@+id/tvBatchTime"
+                                                style="@style/Poppins_Regular"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:textColor="@color/text_color_333333"
+                                                android:textSize="12sp"
+                                                tools:text="5:00 PM to 7:30 PM" />
+                                        </LinearLayout>
+
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="end|center_vertical"
+                                        android:layout_weight="1"
+                                        android:gravity="end|center_vertical">
+
+                                        <LinearLayout
+                                            android:id="@+id/btEnquiry"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:background="@drawable/curve_blue_stroke"
+                                            android:gravity="center"
+                                            android:padding="8dp">
+
+                                            <ImageView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:src="@drawable/ic_email_solid"
+                                                app:tint="@color/blue_text" />
+
+                                            <com.ias.gsscore.utils.CustomTextView
+                                                style="@style/Poppins_Regular"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginStart="5dp"
+                                                android:text="Enquiry"
+                                                android:textColor="@color/text_color_333333"
+                                                android:textSize="12sp" />
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:id="@+id/btCall"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center_vertical"
+                                            android:layout_marginStart="8dp"
+                                            android:background="@drawable/curve_blue_stroke"
+                                            android:gravity="center"
+                                            android:padding="8dp">
+
+                                            <ImageView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:src="@drawable/ic_call_solid"
+                                                app:tint="@color/blue_text" />
+
+                                            <com.ias.gsscore.utils.CustomTextView
+                                                style="@style/Poppins_Regular"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginStart="5dp"
+                                                android:text="Call"
+                                                android:textColor="@color/text_color_333333"
+                                                android:textSize="12sp" />
+
+                                        </LinearLayout>
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_marginTop="5dp"
+                                    android:background="@color/line_color_light" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <LinearLayout
+                                        android:id="@+id/layoutOnline"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_margin="8dp"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/ic_bg_light"
+                                        android:gravity="center"
+                                        android:orientation="vertical">
+
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:background="@drawable/ic_bg_corner_green"
+                                            android:gravity="center"
+                                            android:orientation="vertical"
+                                            android:visibility="gone">
+
+                                            <LinearLayout
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content">
+
+                                                <com.ias.gsscore.utils.CustomTextView
+                                                    android:id="@+id/tvMonthOnline"
+                                                    style="@style/Poppins_Regular"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:text="12 Months"
+                                                    android:textColor="@color/white"
+                                                    android:textSize="12sp" />
+
+
+                                            </LinearLayout>
+                                        </LinearLayout>
+
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:gravity="center">
+
+                                            <LinearLayout
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:gravity="center">
+
+                                                <ImageView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:src="@drawable/ic_online_fee" />
+
+                                                <LinearLayout
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_gravity="center"
+                                                    android:layout_marginStart="16dp"
+                                                    android:layout_marginTop="4dp"
+                                                    android:gravity="center"
+                                                    android:orientation="vertical">
+
+                                                    <com.ias.gsscore.utils.CustomTextView
+                                                        android:id="@+id/tvOnlineAmount"
+                                                        style="@style/Poppins_Medium"
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:textColor="@color/green"
+                                                        android:textSize="12sp"
+                                                        tools:text="₹ 130,000/-" />
+
+                                                    <com.ias.gsscore.utils.CustomTextView
+                                                        style="@style/Poppins_Medium"
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:text="Online Fee"
+                                                        android:textColor="@color/text_color_333333"
+                                                        android:textSize="12sp" />
+
+                                                    <com.ias.gsscore.utils.CustomTextView
+                                                        android:id="@+id/online_gst"
+                                                        style="@style/Poppins_Medium"
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:text="(Include GST)"
+                                                        android:textColor="@color/text_color_333333"
+                                                        android:textSize="12sp" />
+
+                                                </LinearLayout>
+
+                                            </LinearLayout>
+
+                                        </LinearLayout>
+
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/layoutOffline"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_margin="8dp"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/ic_bg_light"
+                                        android:gravity="center"
+                                        android:orientation="vertical">
+
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:background="@drawable/ic_bg_corner_blue"
+                                            android:gravity="center"
+                                            android:orientation="vertical"
+                                            android:visibility="gone">
+
+                                            <LinearLayout
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content">
+
+                                                <com.ias.gsscore.utils.CustomTextView
+                                                    android:id="@+id/tvMonthOffline"
+                                                    style="@style/Poppins_Regular"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:text="12 Months"
+                                                    android:textColor="@color/white"
+                                                    android:textSize="12sp" />
+
+
+                                            </LinearLayout>
+                                        </LinearLayout>
+
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:gravity="center">
+
+                                            <LinearLayout
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:gravity="center">
+
+                                                <ImageView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:src="@drawable/ic_offline_fee" />
+
+                                                <LinearLayout
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_gravity="center"
+                                                    android:layout_marginStart="16dp"
+                                                    android:layout_marginTop="4dp"
+                                                    android:gravity="center"
+                                                    android:orientation="vertical">
+
+                                                    <com.ias.gsscore.utils.CustomTextView
+                                                        android:id="@+id/tvOfflineAmount"
+                                                        style="@style/Poppins_Medium"
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:textColor="@color/blue_text"
+                                                        android:textSize="12sp"
+                                                        tools:text="₹ 130,000/-" />
+
+                                                    <com.ias.gsscore.utils.CustomTextView
+                                                        style="@style/Poppins_Medium"
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:text="Offline Fee"
+                                                        android:textColor="@color/text_color_333333"
+                                                        android:textSize="12sp" />
+
+                                                    <com.ias.gsscore.utils.CustomTextView
+                                                        android:id="@+id/offline_gst"
+                                                        style="@style/Poppins_Medium"
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:text="(Include GST)"
+                                                        android:textColor="@color/text_color_333333"
+                                                        android:textSize="12sp" />
+
+                                                </LinearLayout>
+
+                                            </LinearLayout>
+
+                                        </LinearLayout>
+
+
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:padding="5dp">
+
+                                    <LinearLayout
+                                        android:id="@+id/btAllBatches"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/curve_blue_stroke"
+                                        android:gravity="center"
+                                        android:padding="8dp">
+
+                                        <com.ias.gsscore.utils.CustomTextView
+                                            style="@style/Poppins_SemiBold"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="5dp"
+                                            android:text="View Batches"
+                                            android:textColor="@color/blue_text"
+                                            android:textSize="12sp" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/btBrochure"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_marginStart="8dp"
+                                        android:layout_marginEnd="8dp"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/curve_blue_stroke"
+                                        android:gravity="center"
+                                        android:padding="8dp">
+
+                                        <ImageView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:src="@drawable/ic_course_brochure"
+                                            app:tint="@color/blue_text" />
+
+                                        <com.ias.gsscore.utils.CustomTextView
+                                            style="@style/Poppins_SemiBold"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="5dp"
+                                            android:text="Brochure"
+                                            android:textColor="@color/blue_text"
+                                            android:textSize="12sp" />
+
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/layoutTab"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.tabs.TabLayout
+                            android:id="@+id/tab_layout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:tabBackground="@color/white"
+                            app:tabGravity="fill"
+                            app:tabIndicatorColor="@color/blue_text"
+                            app:tabIndicatorHeight="2dp"
+                            app:tabMode="scrollable"
+                            app:tabSelectedTextColor="@color/blue_text"
+                            app:tabTextAppearance="@style/TabTextAppearance"
+                            app:tabTextColor="@color/tab_unselected" />
+                    </LinearLayout>
+
+
+                    <androidx.viewpager2.widget.ViewPager2
+                        android:id="@+id/view_pager"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="8dp"
+                        android:background="@color/white" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+
+        <LinearLayout
+            android:id="@+id/bottomLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:padding="5dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="center_vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <com.ias.gsscore.utils.CustomTextView
+                        android:id="@+id/tvBatchStartDateBottom"
+                        style="@style/Poppins_Regular"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/blue_text"
+                        android:textSize="12sp"
+                        android:text="Start From 19 Feb" />
+
+                    <com.ias.gsscore.utils.CustomTextView
+                        android:id="@+id/tvBatchTimeBottom"
+                        style="@style/Poppins_Regular"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_color_333333"
+                        android:textSize="12sp"
+                        android:text="5:00 PM to 7:30 PM" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/enrollNow"
+                android:layout_width="113dp"
+                android:layout_height="33dp"
+                android:layout_gravity="center"
+                android:background="@drawable/curve_blue_solid"
+                android:gravity="center">
+
+
+                <com.ias.gsscore.utils.CustomTextView
+                    style="@style/Poppins_SemiBold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Enroll Now"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</layout>

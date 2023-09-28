@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="2dp"
+            app:cardBackgroundColor="@color/white"
+            android:layout_marginTop="5dp"
+            android:background="@color/white"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:id="@+id/fav_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:layout_marginStart="8dp"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/packageImage"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/book1"
+                                android:scaleType="fitXY"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.75"
+                            android:layout_gravity="center"
+                            android:gravity="center_vertical"
+                            android:layout_marginHorizontal="8dp"
+                            android:orientation="vertical">
+
+                            <com.ias.gsscore.utils.CustomTextView
+                                android:id="@+id/tvTitle"
+                                style="@style/Poppins_Medium"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="center_vertical"
+                                android:maxLines="1"
+                                android:ellipsize="end"
+                                android:text="GS SCORE: IAS FOUNDATION 2023"
+                                android:textColor="@color/blue_text"
+                                android:textSize="16sp" />
+
+                            <com.ias.gsscore.utils.CustomTextView
+                                style="@style/Poppins_Regular"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="center_vertical"
+                                android:maxLines="1"
+                                android:ellipsize="end"
+                                tools:text="By Manoj K. Jha"
+                                android:textColor="#131313"
+                                android:textSize="14sp" />
+
+
+                            <com.ias.gsscore.utils.CustomTextView
+                                android:id="@+id/tvAmount"
+                                style="@style/Poppins_Medium"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:maxLines="1"
+                                tools:text="₹ 25,000"
+                                android:textColor="@color/blue_text"
+                                android:textSize="14sp" />
+
+
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <com.ias.gsscore.utils.CustomTextView
+                                    android:id="@+id/tvDeliverBy"
+                                    style="@style/Poppins_Regular"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginEnd="5dp"
+                                    android:ellipsize="end"
+                                    android:gravity="center_vertical"
+                                    android:maxLines="1"
+                                    android:textColor="#858585"
+                                    android:textSize="12sp"
+                                    tools:ignore="RelativeOverlap"
+                                    tools:text="Delivery By : 20 Feb" />
+
+
+                                <ImageView
+                                    android:id="@+id/removeCartItem"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_marginEnd="10dp"
+                                    android:src="@drawable/ic_delete_grey" />
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/bg_color"
+                        android:layout_marginTop="16dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:layout_gravity="center"
+                        android:gravity="center">
+
+                        <com.ias.gsscore.utils.CustomTextView
+                            android:id="@+id/tvMoveToCart"
+                            style="@style/Poppins_Regular"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:textColor="@color/text_color_333333"
+                            android:textSize="16sp"
+                            android:text="Move to Cart" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</LinearLayout>

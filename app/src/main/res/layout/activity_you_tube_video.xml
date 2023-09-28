@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+        android:id="@+id/youtubeView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:autoPlay="false"
+        tools:visibility="visible"
+        app:showFullScreenButton="true"
+        app:showSeekBar="true"
+        app:showVideoDuration="true"
+        app:showYouTubeButton="false" />
+
+</LinearLayout>

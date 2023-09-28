@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_grey"
+    android:orientation="vertical">
+
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:visibility="visible"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <RelativeLayout
+                        android:id="@+id/layoutVideo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+
+                        <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+                            android:id="@+id/youtubeView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:autoPlay="false"
+                            app:showFullScreenButton="false"
+                            app:showSeekBar="false"
+                            app:showVideoDuration="false"
+                            app:showYouTubeButton="false"
+                            tools:visibility="visible" />
+
+                        <ImageView
+                            android:id="@+id/videoThumbnail"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginBottom="30dp"
+                            android:layout_marginRight="10dp"
+                            android:paddingBottom="10dp"
+                            android:layout_alignParentBottom="true"
+
+                            android:src="@drawable/fullscreen"
+                            tools:visibility="visible" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_forward_left"/>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/btPlay"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone"
+                                android:src="@drawable/ic_pause_white"/>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_forward_right"/>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignEnd="@id/layoutVideo"
+                        android:layout_alignBottom="@id/layoutVideo"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:padding="3dp"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/fullscreen"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignStart="@id/layoutVideo"
+                        android:layout_alignBottom="@id/layoutVideo"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:padding="3dp"
+                        android:visibility="gone">
+
+                        <com.ias.gsscore.utils.CustomTextView
+                            android:id="@+id/tvDuration"
+                            style="@style/Poppins_Regular"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:text="0:07:32 / 1:12:30" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/ivImage"
+                        tools:ignore="NotSibling"
+                        android:visibility="gone">
+
+                        <ProgressBar
+                            android:layout_width="match_parent"
+                            android:layout_height="3dp"
+                            android:progress="30"
+                            android:background="@color/grey"/>
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardElevation="2dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_margin="5dp">
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <LinearLayout
+                                        android:id="@+id/item_layout"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:gravity="center_vertical"
+                                        android:orientation="vertical">
+
+                                        <com.ias.gsscore.utils.CustomTextView
+                                            android:id="@+id/tvTitle"
+                                            style="@style/Poppins_Regular"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textColor="@color/text_color_333333"
+                                            android:textSize="14sp"
+                                            android:text="Session 1 - Geography and Politics" />
+
+                                    </LinearLayout>
+
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical"
+                                        android:layout_marginEnd="5dp"
+                                        android:visibility="gone"
+                                        android:gravity="center">
+
+                                        <ImageView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:src="@drawable/ic_bookmark"/>
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_marginTop="10dp"
+                                    android:background="@color/line_color_light" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="5dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginBottom="5dp">
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center_vertical"
+                                        android:layout_weight="1">
+
+                                        <ImageView
+                                            android:layout_width="15dp"
+                                            android:layout_height="15dp"
+                                            android:src="@drawable/ic_start" />
+
+                                        <com.ias.gsscore.utils.CustomTextView
+                                            android:id="@+id/typename"
+                                            style="@style/Poppins_Regular"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textColor="@color/text_color_333333"
+                                            android:textSize="12sp"
+                                            android:maxLines="1"
+                                            android:ellipsize="end"
+                                            android:layout_marginStart="5dp"
+                                            tools:text="Manoj K. Jha" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center_vertical"
+                                        android:layout_weight="1">
+
+                                        <ImageView
+                                            android:layout_width="15dp"
+                                            android:layout_height="15dp"
+                                            android:src="@drawable/ic_calender_small" />
+
+                                        <com.ias.gsscore.utils.CustomTextView
+                                            android:id="@+id/date"
+                                            style="@style/Poppins_Regular"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textColor="@color/text_color_333333"
+                                            android:textSize="12sp"
+                                            android:layout_marginStart="5dp"
+                                            android:text="06-12-2020" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/download"
+                                        android:layout_width="0dp"
+                                        android:gravity="center_vertical"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1">
+
+                                        <ImageView
+                                            android:id="@+id/icDownloads"
+                                            android:layout_width="15dp"
+                                            android:layout_height="15dp"
+                                            android:src="@drawable/ic_course_brochure"
+                                            app:tint="@color/blue_text" />
+
+                                        <com.ias.gsscore.utils.CustomTextView
+                                            android:id="@+id/tvDelete"
+                                            style="@style/Poppins_Regular"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textColor="@color/black"
+                                            android:textSize="12sp"
+                                            android:layout_marginStart="5dp"
+                                            android:text="Download" />
+
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp">
+
+                    <com.ias.gsscore.utils.CustomTextView
+                        style="@style/Poppins_Medium"
+                        android:id="@+id/tvOtherVideo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_color_333333"
+                        android:textSize="14sp"
+                        android:text="Other Videos" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/light_grey"
+                        android:orientation="horizontal"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:listitem="@layout/row_other_videos" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+
+    </LinearLayout>

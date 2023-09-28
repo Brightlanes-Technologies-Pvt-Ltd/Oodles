@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">Ias Score</string>
+    <string name="published">Published</string>
+    <string name="descriptions">
+        <br>
+        The Global Nutrition Report is the world’s leading independent assessment of the state of global nutrition. It is data-led and produced each year to cast a light on where progress has been made and identify where challenges remain.
+        </br>
+        The report aims to inspire governments, civil society and private stakeholders to act to end malnutrition in all its forms. It also plays the important role of helping hold stakeholders to account on the commitments they have made towards tackling malnutrition.
+         <br>
+         </br>
+        <br>
+            The goal is to inform, shape and inspire action with data and evidence on policy, practice and financing which result in greater accountability and progress in tackling poor diets and malnutrition globally.
+        </br>
+        <br>
+            The summary of the report is very important from UPSC GS Paper 2 point of view as it gives details about the overall nutritional development of various countries as compared to India.
+        </br>
+    </string>
+    <string name="default_notification_channel_id" translatable="false">fcm_default_channel</string>
+    <string name="forget_password_text_click">Click here to go back to Login screen</string>
+    <string name="dummy_text">"Course Highlights The preparation of UPSC CSE demands a calibrated approach to tackle various aspects like basic concepts, their application in the examination, ability to articulate through answer writing, regular updates and dynamic approach with a focus on current affairs. Hence it needs a synchronised and systematised effort to make a lot of entities work in concert. GS Score's Foundation program serves each of the above vital components covering all the subjects for GS for all the levels i.e. Prelims Mains and Personality Tests through a protracted and measured process involving the following steps: 1. PREMIER- BRIDGE As first step, Premier Bridge classes will be conducted to act as a bridge between your knowledge and the actual demand of the examination. Classes will focus on Understanding Micro Detailing of the Syllabus, its linkages with current affairs and the approaches for the writing well articulated answers. 2. MAINS INTEGRATED As part of MAINS INTEGRATED classes, Elaborate and Detailed classes will be conducted covering complete syllabus with integrated (Prelims cum Mains) perspective. Apart from comprehensive classes it will also include: Regular answer writing Practice Weekly Current Affairs class to understand the dynamism of Current Issues and its linkage with syllabus Essay Classes Mains Test Series 3. PRELIMS Prelims Specific classes will be conducted after mains integrated classes. These classes will ensure comprehensive coverage of UPSC Prelims syllabus. Prelims specific current affair classes will also be conducted to elevate the level of preparation for Prelims. Along with classes, Prelims TEST SERIES will also be provided. 4. MAINS UPDATION Mains examination demands that extra push with harmony of concepts and contemporary issues. This happens through value addition by updating ones knowledge along with sharp analysis to get mains ready. After prelims mains updation will be provided, which will include Contemporary issues classes Mains Mock Tests Essay Mock Tests PERSONALISED MENTORING In addition to regular classes, regular One-on-One doubt clearing sessions will be conducted to identify areas for improvement and accordingly provide our students personalised recommendations to improve one’s chances of success. STUDY MATERIAL Updated, enriched and Comprehensive Study Material covering all the subjects will be provided."</string>
+    <string name="error_msg">Something went wrong!!</string>
+    <string name="test_instruction_description"><![CDATA[1) This Test Set contains 50 questions. Each question comprises four responses (answers). You will need to select the response which you want to mark. 2) All questions carry equal marks. (2 Marks Each) 3) For each question for which a wrong answer has been given by the candidate, one third (-0.33 %) of the marks assigned to that question will be deducted as penalty. 4) If no answer is given by a candidate to a question, there will be no penalty for that question. 5) After you have completed filling in all your responses on the Answer Sheet and the examination has concluded, you should press the SUBMIT button. Once you have pressed the SUBMIT button no alteration to the responses provided will be possible. 6) There are three buttons: Previous, Mark & Next and Save & Next. Mark & Next Button allows to revise your answer later before submission of test. Save and Next Button will finally submit your answer. 7) Please adhere to the given time limit (1 Hour). On the expiry of time limit the session of the Test ends and evaluation will be made on the responses provided till that point of time. 8) After completion of test you can view your result which will be saved in your account for future access.]]></string>
+    <string name="unproductive_time"><![CDATA[Unproductive <br>Time]]></string>
+
+    <string-array name="years">
+        <item>2021</item>
+        <item>2020</item>
+        <item>2019</item>
+        <item>2018</item>
+        <item>2017</item>
+        <item>2016</item>
+        <item>2015</item>
+        <item>2014</item>
+        <item>2013</item>
+        <item>2012</item>
+        <item>2011</item>
+        <item>2010</item>
+    </string-array>
+
+    <string-array name="all">
+        <item>All</item>
+    </string-array>
+    <string-array name="culture">
+        <item>Indian Culture</item>
+    </string-array>
+    <string-array name="region_lang">
+        <item>Region, Language &amp; Literature</item>
+    </string-array>
+    <string name="error_player">There was an error initializing the YouTubePlayer (%1$s)</string>
+    <string name="icon_video">icon_video</string>
+    <string name="pdfViewer" translatable="false">Select PDF viewer</string>
+</resources>

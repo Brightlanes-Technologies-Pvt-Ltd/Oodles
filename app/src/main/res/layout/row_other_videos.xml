@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/light_grey">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/mainLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@color/white"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="2dp"
+        app:cardUseCompatPadding="true">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="vertical">
+
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/ivImage"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/dummy_image7" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignEnd="@id/ivImage"
+                            android:layout_alignBottom="@id/ivImage"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:background="@drawable/curve_blue_solid"
+                            android:padding="3dp">
+
+                            <com.ias.gsscore.utils.CustomTextView
+                                android:id="@+id/tvDuration"
+                                style="@style/Poppins_Regular"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginEnd="5dp"
+                                android:text="1:12:30"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:orientation="vertical">
+
+                        <com.ias.gsscore.utils.CustomTextView
+                            android:id="@+id/tvVideoTitle"
+                            style="@style/Poppins_Medium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Session 1 -"
+                            android:maxLines="1"
+                            android:ellipsize="end"
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+
+                        <com.ias.gsscore.utils.CustomTextView
+                            android:id="@+id/tvName"
+                            style="@style/Poppins_Regular"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            tools:text=" Geography and Politics"
+                            android:visibility="gone"
+                            android:textColor="@color/text_color_333333"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginEnd="5dp"
+                            android:gravity="start">
+
+                            <ImageView
+                                android:layout_width="12sp"
+                                android:layout_height="12sp"
+                                android:src="@drawable/ic_user"
+                                app:tint="@color/text_color_1"
+                                android:layout_marginTop="3dp"/>
+
+                            <com.ias.gsscore.utils.CustomTextView
+                                android:id="@+id/tvThoughtBy"
+                                style="@style/Poppins_Regular"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Manoj K. Jha"
+                                android:textColor="@color/text_color_1"
+                                android:textSize="12sp"
+                                android:layout_marginStart="3dp"
+                                app:drawableTint="@color/text_color_1" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_gravity="end"
+                            android:gravity="end">
+
+                            <com.ias.gsscore.utils.CustomTextView
+                                android:id="@+id/tvAddedOn"
+                                style="@style/Poppins_Regular"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawableStart="@drawable/ic_calender_small"
+                                android:drawablePadding="5dp"
+                                android:text="06-12-2020"
+                                android:textColor="@color/text_color_1"
+                                android:textSize="12sp"
+                                app:drawableTint="@color/text_color_1" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
+

@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewmodel"
+            type="com.ias.gsscore.ui.viewmodel.CartItemListViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_color">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+                <LinearLayout
+                android:id="@+id/layout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="10dp"
+                    android:gravity="center"
+                    android:onClick="@{()->viewmodel.backPress()}">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_back_black" />
+
+                </LinearLayout>
+
+                <com.ias.gsscore.utils.CustomTextView
+                    android:id="@+id/headerTitle"
+                    style="@style/Poppins_Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Shopping Cart"
+                    android:textColor="@color/blue_text"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+                <androidx.core.widget.NestedScrollView
+                    android:id="@+id/scrollView"
+                    android:layout_below="@+id/layout1"
+                    android:layout_above="@+id/order_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="2dp"
+                    android:fillViewport="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#fff"
+                        android:clipToPadding="false"
+                        android:orientation="vertical">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:visibility="gone">
+                            <com.ias.gsscore.utils.CustomTextView
+                                style="@style/Poppins_Medium"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingStart="20dp"
+                                android:text="Digital items (1)"
+                                android:textColor="#000"
+                                android:textSize="16sp" />
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/rvDigital"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:clipToPadding="false"
+                                android:orientation="vertical"
+                                android:adapter="@{viewmodel.cartDigitalItemAdapter}"
+                                android:overScrollMode="never"
+                                android:paddingVertical="8dp"
+                                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                                tools:listitem="@layout/layout_digital_item" />
+
+
+                        </LinearLayout>
+
+                        <com.ias.gsscore.utils.CustomTextView
+                            android:id="@+id/tvTotalItem"
+                            style="@style/Poppins_Medium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="20dp"
+                            android:text="Delivery items (0)"
+                            android:textColor="#000"
+                            android:textSize="16sp" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvDeliver"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:adapter="@{viewmodel.whereFrom==0?viewmodel.adapterCart:viewmodel.adapterWishlist}"
+                            android:clipToPadding="false"
+                            android:orientation="vertical"
+                            android:overScrollMode="never"
+                            android:paddingVertical="8dp"
+                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                            tools:listitem="@layout/layout_deliver_item" />
+                    </LinearLayout>
+
+                </androidx.core.widget.NestedScrollView>
+
+            <LinearLayout
+                android:id="@+id/order_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="#fff"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#c2c2c2" />
+
+                <LinearLayout
+                    android:id="@+id/total_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:orientation="horizontal"
+                    android:visibility="visible"
+                    android:weightSum="1">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="20dp"
+                        android:layout_weight="0.5"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <com.ias.gsscore.utils.CustomTextView
+                            style="@style/Poppins_Medium"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Sub Total "
+                            android:textColor="@color/black"
+                            android:textSize="12sp" />
+
+                        <com.ias.gsscore.utils.CustomTextView
+                            android:id="@+id/total"
+                            style="@style/Poppins_Medium"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            tools:text="₹ 20"
+                            android:textColor="#31BD00"
+                            android:textSize="20sp" />
+
+
+                    </LinearLayout>
+
+
+                    <com.ias.gsscore.utils.CustomTextView
+                        android:id="@+id/btn_continue"
+                        style="@style/Poppins_Medium"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:layout_weight="0.5"
+                        android:background="@color/blue_text"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:text="Continue"
+                        android:textColor="#fff"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</layout>

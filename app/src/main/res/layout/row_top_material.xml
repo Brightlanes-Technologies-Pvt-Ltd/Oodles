@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="3dp"
+    android:layout_marginEnd="3dp">
+
+
+    <LinearLayout
+        android:id="@+id/layoutButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_bg_light_blue"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="16sp"
+            android:layout_marginBottom="3dp"
+            android:textStyle="bold"
+            tools:text="Report &amp; Magazines" />
+
+    </LinearLayout>
+</LinearLayout>

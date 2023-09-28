@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewmodel"
+            type="com.ias.gsscore.ui.viewmodel.StudyNotesDetailsViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nest_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:fillViewport="true"
+            android:paddingBottom="50dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp">
+
+                        <androidx.viewpager2.widget.ViewPager2
+                            android:id="@+id/view_pager2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:overScrollMode="never" />
+                    </LinearLayout>
+
+
+                    <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
+                        android:id="@+id/dots_indicator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="20dp"
+                        app:dotsColor="#c2c2c2"
+                        app:dotsCornerRadius="8dp"
+                        app:dotsSize="5dp"
+                        app:dotsSpacing="2dp"
+
+                        app:dotsWidthFactor="1.5"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/view_pager2"
+                        app:selectedDotColor="@color/blue_text" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <com.ias.gsscore.utils.CustomTextView
+                            android:id="@+id/title"
+                            style="@style/Poppins_Regular"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.7"
+                            android:text="IAS PRELIMS cum MAINS Study Material:Complete Materials"
+                            android:textColor="#333333"
+                            android:textSize="14sp" />
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.15"
+                            android:visibility="gone"
+                            android:src="@drawable/ic_share" />
+
+                        <ImageView
+                            android:id="@+id/ivWishlist"
+                            android:layout_width="0dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.15"
+                            android:visibility="gone"
+                            android:onClick="@{()->viewmodel.clickAddToWishlist()}"
+                            android:src="@drawable/ic_fav" />
+
+                    </LinearLayout>
+
+                    <com.ias.gsscore.utils.CustomTextView
+                        style="@style/Poppins_Light"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        tools:text="By IAS SCORE"
+                        android:visibility="gone"
+                        android:textColor="@color/grey_text"
+                        android:textSize="14sp" />
+
+                    <WebView
+                        android:id="@+id/tvDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        tools:ignore="WebViewLayout" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/grey_text" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center_vertical">
+
+                            <com.ias.gsscore.utils.CustomTextView
+                                style="@style/Poppins_Light"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                tools:text="By IAS SCORE"
+                                android:textColor="@color/grey_text"
+                                android:textSize="14sp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:orientation="horizontal">
+
+                                <com.ias.gsscore.utils.CustomTextView
+                                    android:id="@+id/price"
+                                    style="@style/Poppins_Regular"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:maxLines="1"
+                                    tools:text="1000"
+                                    android:textColor="#c4c4c4"
+                                    android:textSize="13sp" />
+
+                                <com.ias.gsscore.utils.CustomTextView
+                                    android:id="@+id/discounted_price"
+                                    style="@style/Poppins_Regular"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:maxLines="1"
+                                    tools:text="₹2,000"
+                                    android:textColor="#5c5c5c"
+                                    android:textSize="16sp" />
+
+
+                                <com.ias.gsscore.utils.CustomTextView
+                                    android:id="@+id/percentage"
+                                    style="@style/Poppins_Regular"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:maxLines="1"
+                                    tools:text="50% off"
+                                    android:textColor="#388e3c"
+                                    android:textSize="12sp" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="120dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/curve_green_stroke"
+                            android:orientation="horizontal"
+                            android:weightSum="1"
+                            android:visibility="gone"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center_vertical">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.3"
+                                android:background="@drawable/bg_grey_half_cuve"
+                                android:gravity="center">
+
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/ic_minus" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.4"
+                                android:gravity="center">
+
+                                <com.ias.gsscore.utils.CustomTextView
+                                    style="@style/Poppins_Medium"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="1"
+                                    android:textColor="#4CAF50"
+                                    android:textSize="18sp" />
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.3"
+                                android:background="@drawable/curve_green_half"
+                                android:gravity="center">
+
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/ic_plus" />
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:layout_marginTop="10dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:layout_weight="1">
+                            <LinearLayout
+                                android:id="@+id/add_to_cart"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+
+                                android:layout_gravity="center"
+                                android:background="@drawable/curve_blue_stroke"
+                                android:onClick="@{()->viewmodel.addToCartApiCall()}"
+                                android:gravity="center">
+
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:src="@drawable/ic_cart_blue" />
+
+                                <com.ias.gsscore.utils.CustomTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="10dp"
+                                    android:gravity="center"
+                                    android:text="Add to Cart"
+                                    android:textColor="@color/blue_text" />
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:gravity="center"
+                                android:visibility="gone"
+                                android:orientation="vertical">
+
+                                <com.ias.gsscore.utils.CustomTextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:background="@drawable/curve_blue_solid"
+                                    android:gravity="center"
+                                    android:text="Buy Now"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp" />
+
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="@color/light_grey" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <com.ias.gsscore.utils.CustomTextView
+                        style="@style/Poppins_Regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Details"
+                        android:textColor="#2B2C2D"
+                        android:textSize="14sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/curve_grey_stroke"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:background="@drawable/curve_blue_solid_grey_stroke">
+
+                            <com.ias.gsscore.utils.CustomTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="10dp"
+                                android:text="About"
+                                android:textColor="@color/blue_text" />
+
+                            <LinearLayout
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_alignParentRight="true"
+                                android:gravity="center">
+
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/ic_up" />
+                            </LinearLayout>
+
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="-10dp"
+                            android:layout_marginRight="10dp"
+                            android:orientation="vertical">
+
+                            <com.ias.gsscore.utils.CustomTextView
+                                style="@style/Poppins_Regular"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:paddingBottom="10dp"
+                                android:text="The General Studies IV Paper in UPSC Civil Services Main Exam checks the Ethics, Integrity, and Aptitude of future civil servants. This paper will include questions to test the candidates’ attitude and approach to issues relating to integrity."
+                                android:textColor="#333333"
+                                android:textSize="14sp" />
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/curve_blue_solid_grey_stroke">
+
+                        <com.ias.gsscore.utils.CustomTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="10dp"
+                            android:text="Chapters"
+                            android:textColor="@color/blue_text" />
+
+                        <LinearLayout
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_alignParentRight="true"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_down" />
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/curve_blue_solid_grey_stroke">
+
+                        <com.ias.gsscore.utils.CustomTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="10dp"
+                            android:text="Main Topics"
+                            android:textColor="@color/blue_text" />
+
+                        <LinearLayout
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_alignParentRight="true"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_down" />
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:orientation="horizontal">
+
+                        <com.ias.gsscore.utils.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="10dp"
+                            android:text="Similar Products"
+                            android:textColor="#2B2C2D" />
+
+                        <com.ias.gsscore.utils.CustomTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="20dp"
+                            android:gravity="right"
+                            android:visibility="gone"
+                            android:text="View All"
+
+                            android:textColor="@color/blue_text" />
+
+
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvStudyList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:adapter="@{viewmodel.adapterProduct}"
+                        android:clipToPadding="false"
+                        android:orientation="vertical"
+                        android:overScrollMode="never"
+                        android:paddingVertical="8dp"
+                        app:spanCount="2"
+                        tools:itemCount="4"
+                        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                        tools:listitem="@layout/layout_deliver_item" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+
+</layout>

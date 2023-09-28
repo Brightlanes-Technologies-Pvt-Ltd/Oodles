@@ -1,0 +1,1217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/light_grey"
+        android:orientation="vertical">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <com.ias.gsscore.utils.CustomTextView
+                    android:id="@+id/testTitle"
+                    style="@style/Poppins_SemiBold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    tools:text="Session 19 - Medieval History"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+
+                <LinearLayout
+                    android:id="@+id/layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/curve_solid_white">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="5dp">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1">
+
+                                <com.ias.gsscore.utils.CustomTextView
+                                    android:id="@+id/tvPercentile"
+                                    style="@style/Poppins_Medium"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Percentile : 60%"
+                                    android:textColor="@color/black"
+                                    android:textSize="12sp" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@color/bg_color" />
+
+                        <ProgressBar
+                            android:id="@+id/progressPercentile"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="12dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginBottom="10dp"
+                            android:max="100"
+                            tools:progress="30"
+                            android:progressDrawable="@drawable/progress_bar_states_green" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/curve_solid_white"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:padding="5dp">
+
+                        <com.ias.gsscore.utils.CustomTextView
+                            style="@style/Poppins_Medium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Performance"
+                            android:textColor="@color/black"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/bg_color" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <LinearLayout
+                            android:visibility="visible"
+                            android:layout_width="match_parent"
+                            android:layout_height="12dp"
+                            android:background="@drawable/progress_bar_states_blue">
+
+                            <LinearLayout
+                                android:id="@+id/progressBlue"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="21.6"
+                                android:background="@drawable/progress_blue_left_round"
+                                android:orientation="horizontal"/>
+                            <LinearLayout
+                                android:id="@+id/progressGreen"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="51.2"
+                                android:background="@drawable/progress_green"
+                                android:orientation="horizontal"/>
+                            <LinearLayout
+                                android:id="@+id/progressYellow"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="92.3"
+                                android:background="@drawable/progress_yellow"
+                                android:orientation="horizontal"/>
+
+                            <LinearLayout
+                                android:id="@+id/progressMain"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="5"
+                                android:orientation="horizontal"/>
+
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/view"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/nav_view" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="20dp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center">
+
+                            <LinearLayout
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:background="@drawable/bg_questions"
+                                android:backgroundTint="@color/blue_text"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:padding="5dp" />
+
+                            <com.ias.gsscore.utils.CustomTextView
+                                android:id="@+id/tvCorrectBlue"
+                                style="@style/Poppins_Regular"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:gravity="center"
+                                android:text="Your Score"
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center">
+
+                            <LinearLayout
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:background="@drawable/bg_questions"
+                                android:backgroundTint="@color/green"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:padding="5dp" />
+
+                            <com.ias.gsscore.utils.CustomTextView
+                                android:id="@+id/tvAverageGreen"
+                                style="@style/Poppins_Regular"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:gravity="center"
+                                android:text="Average Score"
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center">
+
+                            <LinearLayout
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:background="@drawable/bg_questions"
+                                android:backgroundTint="@color/best_score"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:padding="5dp" />
+
+                            <com.ias.gsscore.utils.CustomTextView
+                                android:id="@+id/tvBestScoreYellow"
+                                style="@style/Poppins_Regular"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:gravity="center"
+                                android:text="Best Score"
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="16dp"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_rank_gradient"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <com.ias.gsscore.utils.CustomTextView
+                                    android:id="@+id/tvRank"
+                                    style="@style/Poppins_Medium"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:layout_gravity="center"
+                                    android:text="14/20"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="10dp"
+                                    android:background="@drawable/bg_transparent"
+                                    android:gravity="center">
+
+                                    <com.ias.gsscore.utils.CustomTextView
+                                        style="@style/Poppins_Medium"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="Rank"
+                                        android:textColor="@color/white"
+                                        android:textSize="12sp" />
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_attempt_gradient"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <com.ias.gsscore.utils.CustomTextView
+                                    android:id="@+id/tvAttempt"
+                                    style="@style/Poppins_Medium"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:text="6/100"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="10dp"
+                                    android:background="@drawable/bg_transparent"
+                                    android:gravity="center">
+
+                                    <com.ias.gsscore.utils.CustomTextView
+                                        style="@style/Poppins_Medium"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:gravity="center"
+                                        android:text="Attempt"
+                                        android:textColor="@color/white"
+                                        android:textSize="12sp" />
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_accuracy_gradient"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <com.ias.gsscore.utils.CustomTextView
+                                    android:id="@+id/tvAccuracy"
+                                    style="@style/Poppins_Medium"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:text="33.33%"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="10dp"
+                                    android:background="@drawable/bg_transparent"
+                                    android:gravity="center">
+
+                                    <com.ias.gsscore.utils.CustomTextView
+                                        style="@style/Poppins_Medium"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:gravity="center"
+                                        android:text="Accuracy"
+                                        android:textColor="@color/white"
+                                        android:textSize="12sp" />
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_productive_time_gradient"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <com.ias.gsscore.utils.CustomTextView
+                                    android:id="@+id/tvProductiveTime"
+                                    style="@style/Poppins_Medium"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:text="00:06"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="10dp"
+                                    android:background="@drawable/bg_transparent"
+                                    android:gravity="center">
+
+                                    <com.ias.gsscore.utils.CustomTextView
+                                        style="@style/Poppins_Medium"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="Productive Time"
+                                        android:layout_marginStart="3dp"
+                                        android:layout_marginEnd="3dp"
+                                        android:textColor="@color/white"
+                                        android:textSize="12sp" />
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_unproductive_time_gradient"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <com.ias.gsscore.utils.CustomTextView
+                                    android:id="@+id/tvUnProductiveTime"
+                                    style="@style/Poppins_Medium"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:text="00:55"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="10dp"
+                                    android:background="@drawable/bg_transparent"
+                                    android:gravity="center"
+                                    android:padding="3dp">
+
+                                    <com.ias.gsscore.utils.CustomTextView
+                                        style="@style/Poppins_Medium"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:gravity="center"
+                                        android:text="@string/unproductive_time"
+                                        android:textColor="@color/white"
+                                        android:textSize="12sp" />
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:background="@color/white"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/curve_solid_white"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:padding="5dp">
+
+                        <com.ias.gsscore.utils.CustomTextView
+                            style="@style/Poppins_Medium"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Accuracy Analysis"
+                            android:layout_weight="1"
+                            android:textColor="@color/black"
+                            android:textSize="12sp" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="36dp"
+                            android:minWidth="120dp"
+                            android:gravity="end"
+                            android:background="@drawable/curve_grey_stroke_dark"
+                            android:padding="3dp">
+
+                            <Spinner
+                                android:id="@+id/spinner"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:entries="@array/all"
+                                android:textSize="12sp"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/bg_color" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <LinearLayout
+                            android:visibility="visible"
+                            android:layout_width="match_parent"
+                            android:layout_height="12dp"
+                            android:background="@drawable/progress_bar_states_blue">
+
+                            <LinearLayout
+                                android:id="@+id/progressCorrect"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/progress_green_left_round"
+                                android:orientation="horizontal"/>
+                            <LinearLayout
+                                android:id="@+id/progressIncorrect"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="5"
+                                android:background="@drawable/progress_red"
+                                android:orientation="horizontal"/>
+                            <LinearLayout
+                                android:id="@+id/progressUnattempted"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="4"
+                                android:background="@drawable/progress_dark_grey"
+                                android:orientation="horizontal"/>
+
+                            <LinearLayout
+                                android:id="@+id/progressMainAccuracy"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:orientation="horizontal"/>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/nav_view" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="20dp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center">
+
+                            <LinearLayout
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:background="@drawable/bg_questions"
+                                android:backgroundTint="@color/green"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:padding="5dp" />
+
+                            <com.ias.gsscore.utils.CustomTextView
+                                android:id="@+id/tvActualGreen"
+                                style="@style/Poppins_Regular"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:gravity="center"
+                                android:text="Correct"
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center">
+
+                            <LinearLayout
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:background="@drawable/bg_questions"
+                                android:backgroundTint="@color/red_dark"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:padding="5dp" />
+
+                            <com.ias.gsscore.utils.CustomTextView
+                                android:id="@+id/tvActualRed"
+                                style="@style/Poppins_Regular"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:gravity="center"
+                                android:text="Incorrect"
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center">
+
+                            <LinearLayout
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:background="@drawable/bg_questions"
+                                android:backgroundTint="@color/bg_grey_dark"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:padding="5dp" />
+
+                            <com.ias.gsscore.utils.CustomTextView
+                                android:id="@+id/tvActualGrey"
+                                style="@style/Poppins_Regular"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:gravity="center"
+                                android:text="Unattempted"
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/curve_solid_white"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:padding="5dp">
+
+                        <com.ias.gsscore.utils.CustomTextView
+                            style="@style/Poppins_Medium"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Attempt Analysis"
+                            android:layout_weight="1"
+                            android:textColor="@color/black"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/bg_color" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <LinearLayout
+                            android:visibility="visible"
+                            android:layout_width="match_parent"
+                            android:layout_height="12dp"
+                            android:background="@drawable/progress_bar_states_blue">
+
+                            <LinearLayout
+                                android:id="@+id/progressFluke"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/progress_blue_left_round"
+                                android:orientation="horizontal"/>
+                            <LinearLayout
+                                android:id="@+id/progressWaste"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="5"
+                                android:background="@drawable/progress_red"
+                                android:orientation="horizontal"/>
+                            <LinearLayout
+                                android:id="@+id/progressCorrectAttempt"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="4"
+                                android:background="@drawable/progress_green"
+                                android:orientation="horizontal"/>
+
+                            <LinearLayout
+                                android:id="@+id/progressMainAttempt"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:orientation="horizontal"/>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/nav_view" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="20dp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center">
+
+                            <LinearLayout
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:background="@drawable/bg_questions"
+                                android:backgroundTint="@color/blue_text"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:padding="5dp" />
+
+                            <com.ias.gsscore.utils.CustomTextView
+                                android:id="@+id/tvAttemptBLue"
+                                style="@style/Poppins_Regular"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:gravity="center"
+                                android:text="Fluke"
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center">
+
+                            <LinearLayout
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:background="@drawable/bg_questions"
+                                android:backgroundTint="@color/red"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:padding="5dp" />
+
+                            <com.ias.gsscore.utils.CustomTextView
+                                android:id="@+id/tvAttemptRed"
+                                style="@style/Poppins_Regular"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:gravity="center"
+                                android:text="Waste"
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center">
+
+                            <LinearLayout
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:background="@drawable/bg_questions"
+                                android:gravity="center"
+                                android:backgroundTint="@color/green"
+                                android:orientation="horizontal"
+                                android:padding="5dp" />
+
+                            <com.ias.gsscore.utils.CustomTextView
+                                android:id="@+id/tvAttemptGreen"
+                                style="@style/Poppins_Regular"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:gravity="center"
+                                android:text="Correct"
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/curve_solid_white"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:padding="5dp">
+
+                        <com.ias.gsscore.utils.CustomTextView
+                            style="@style/Poppins_Medium"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Actual Marks vs Negative Marks"
+                            android:layout_weight="1"
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/bg_color" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="20dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:background="@drawable/bg_rank_gradient"
+                                android:gravity="center"
+                                android:backgroundTint="@color/white"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp"
+                                    android:background="@drawable/bg_true_marks"
+                                    android:orientation="vertical"
+                                    android:layout_gravity="center"
+                                    android:gravity="center">
+
+
+                                    <LinearLayout
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
+                                        android:layout_gravity="center"
+                                        android:background="@drawable/bg_questions"
+                                        android:backgroundTint="@color/green"
+                                        android:gravity="center">
+
+                                        <com.ias.gsscore.utils.CustomTextView
+                                            android:id="@+id/tvTrueMarks"
+                                            style="@style/Poppins_Medium"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center"
+                                            android:text="24"
+                                            android:textColor="@color/white"
+                                            android:textSize="12sp" />
+
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+                                <com.ias.gsscore.utils.CustomTextView
+                                    style="@style/Poppins_Medium"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="True Marks"
+                                    android:textColor="@color/black"
+                                    android:layout_marginTop="5dp"
+                                    android:textSize="14sp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="@drawable/bg_rank_gradient"
+                                android:gravity="center"
+                                android:backgroundTint="@color/white"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp"
+                                    android:background="@drawable/bg_actual_marks"
+                                    android:orientation="vertical"
+                                    android:layout_gravity="center"
+                                    android:gravity="center">
+
+
+                                    <LinearLayout
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
+                                        android:layout_gravity="center"
+                                        android:background="@drawable/bg_questions"
+                                        android:backgroundTint="@color/red"
+                                        android:gravity="center">
+
+                                        <com.ias.gsscore.utils.CustomTextView
+                                            android:id="@+id/tvActualMarks"
+                                            style="@style/Poppins_Medium"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center"
+                                            android:text="6"
+                                            android:textColor="@color/white"
+                                            android:textSize="12sp" />
+
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+                                <com.ias.gsscore.utils.CustomTextView
+                                    style="@style/Poppins_Medium"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="Actual Marks"
+                                    android:textColor="@color/black"
+                                    android:layout_marginTop="5dp"
+                                    android:textSize="14sp" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/line_horizental"/>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:layout_marginStart="10dp"
+                                android:background="@drawable/bg_accuracy_gradient"
+                                android:backgroundTint="@color/white"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:gravity="center"
+                                        android:layout_marginStart="5dp"
+                                        android:orientation="vertical">
+                                        <ImageView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:src="@drawable/ic_arrow_down_red"/>
+                                        <ImageView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:src="@drawable/ic_arrow_down_red"/>
+                                    </LinearLayout>
+
+
+                                    <com.ias.gsscore.utils.CustomTextView
+                                        android:id="@+id/tvNegativeMarks"
+                                        style="@style/Poppins_Regular"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:gravity="center"
+                                        android:layout_marginStart="5dp"
+                                        tools:text="23.10 Negative Marks"
+                                        android:textColor="@color/black"
+                                        android:textSize="12sp" />
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/curve_solid_white"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:padding="5dp">
+
+                        <com.ias.gsscore.utils.CustomTextView
+                            style="@style/Poppins_Medium"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Area of Improvements"
+                            android:layout_weight="1"
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/bg_color" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvRecyclerView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            tools:itemCount="5"
+                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                            tools:listitem="@layout/row_area_of_improvement" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+</layout>

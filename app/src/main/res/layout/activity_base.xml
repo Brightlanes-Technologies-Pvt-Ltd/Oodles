@@ -1,0 +1,766 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F9F9F9">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginLeft="-20dp"
+                android:layout_marginTop="-20dp"
+                android:layout_marginRight="-20dp"
+                android:background="@drawable/actionbar_bg"
+                android:gravity="center_vertical">
+
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="@color/white"
+                    app:layout_scrollFlags="scroll|enterAlways">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:id="@+id/nav"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="20dp">
+
+                            <LinearLayout
+                                android:id="@+id/navClick"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp">
+
+                                <ImageView
+                                    android:id="@+id/img_nav"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/ic_nav_icon" />
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:id="@+id/ivBack"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:visibility="gone">
+
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/ic_back_black" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+
+                        <ImageView
+                            android:id="@+id/nav_logo"
+                            android:layout_width="120dp"
+                            android:layout_height="50dp"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/nav"
+                            android:src="@drawable/splash_logo"
+                            android:visibility="visible" />
+
+                        <com.ias.gsscore.utils.CustomTextView
+                            android:id="@+id/title"
+                            style="@style/Poppins_SemiBold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/nav"
+                            android:layout_marginEnd="5dp"
+                            android:ellipsize="end"
+                            android:maxLength="20"
+                            android:text=""
+                            android:textColor="@color/blue_text"
+                            android:textSize="18sp" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/payu_dimen_10dp">
+
+                            <LinearLayout
+                                android:id="@+id/cart"
+                                android:layout_width="40dp"
+                                android:layout_height="50dp"
+                                android:layout_centerVertical="true"
+                                android:layout_toLeftOf="@+id/notification">
+
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/ic_cart" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/notification"
+                                android:layout_width="40dp"
+                                android:layout_height="50dp"
+                                android:layout_centerVertical="true"
+                                android:layout_toLeftOf="@+id/search">
+
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/ic_notification" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/search"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:visibility="gone">
+
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/ic_search" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </RelativeLayout>
+                </androidx.appcompat.widget.Toolbar>
+            </LinearLayout>
+
+
+            <FrameLayout
+                android:id="@+id/content_frame"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutFooter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <include layout="@layout/layout_bottom_bar" />
+        </LinearLayout>
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/navigation_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="#F9F9F9"
+            android:fitsSystemWindows="true">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#F9F9F9"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#F9F9F9"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="vertical">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:background="#F9F9F9"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="150dp"
+                                android:orientation="vertical">
+
+                                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginTop="30dp">
+
+
+                                    <LinearLayout
+                                        android:id="@+id/image"
+                                        android:layout_width="80dp"
+                                        android:layout_height="80dp"
+                                        android:background="@drawable/curve_solid_white"
+                                        android:gravity="center">
+
+                                        <com.ias.gsscore.utils.RoundRectCornerImageView
+                                            android:id="@+id/img"
+                                            android:layout_width="70dp"
+                                            android:layout_height="70dp"
+                                            android:layout_gravity="center"
+                                            android:src="@drawable/no_image" />
+                                    </LinearLayout>
+
+                                    <ImageView
+                                        android:layout_width="25dp"
+                                        android:layout_height="25dp"
+                                        android:layout_marginLeft="60dp"
+                                        android:layout_marginTop="55dp"
+                                        android:src="@drawable/ic_nav_edit" />
+
+                                    <ImageView
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:layout_marginTop="60dp"
+                                        android:src="@drawable/nav_online" />
+
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_marginTop="20dp"
+                                        android:layout_toRightOf="@id/image"
+                                        android:orientation="vertical">
+
+                                        <com.ias.gsscore.utils.CustomTextView
+                                            style="@style/Poppins_Medium"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="Suraj Dubey"
+                                            android:textColor="@color/blue_text"
+                                            android:textSize="14sp" />
+
+                                        <com.ias.gsscore.utils.CustomTextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="Roll NO. 1234567"
+                                            android:textColor="@color/black"
+                                            android:textSize="12sp" />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/settingLayout"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_marginTop="10dp"
+                                        android:layout_marginRight="20dp"
+                                        android:orientation="vertical">
+
+                                        <LinearLayout
+                                            android:layout_width="40dp"
+                                            android:layout_height="40dp"
+                                            android:background="@drawable/setting_bg"
+                                            android:gravity="center">
+
+                                            <ImageView
+                                                android:layout_width="20dp"
+                                                android:layout_height="20dp"
+                                                android:layout_gravity="center"
+                                                android:src="@drawable/ic_setting" />
+                                        </LinearLayout>
+
+
+                                        <com.ias.gsscore.utils.CustomTextView
+                                            style="@style/Poppins_Light"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="-10dp"
+                                            android:text="Settings"
+                                            android:textColor="@color/blue_text"
+                                            android:textSize="10sp" />
+
+                                    </LinearLayout>
+
+
+                                </RelativeLayout>
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:layout_marginLeft="10dp"
+                                android:background="@drawable/nav_selec_bg"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/ic_course_blue" />
+
+                                <com.ias.gsscore.utils.CustomTextView
+                                    android:id="@+id/tvDashboard"
+                                    style="@style/Poppins_Regular"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginLeft="10dp"
+                                    android:gravity="center_vertical"
+                                    android:text="My Courses"
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.5dp"
+                                android:background="@drawable/nav_view" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:layout_marginLeft="10dp"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/ic_course_schedule_black" />
+
+                                <com.ias.gsscore.utils.CustomTextView
+                                    android:id="@+id/tvAccount"
+                                    style="@style/Poppins_Regular"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginLeft="10dp"
+                                    android:clickable="true"
+                                    android:gravity="center_vertical"
+                                    android:text="Course Schedule"
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@drawable/nav_view" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:layout_marginLeft="10dp"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/ic_payment_black" />
+
+                                <com.ias.gsscore.utils.CustomTextView
+                                    android:id="@+id/tvProducts"
+                                    style="@style/Poppins_Regular"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginLeft="10dp"
+                                    android:gravity="center_vertical"
+                                    android:text="Payment History"
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@drawable/nav_view" />
+
+                            <LinearLayout
+                                android:id="@+id/layouMyDownloads"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:layout_marginLeft="10dp"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="22dp"
+                                    android:layout_height="22dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/ic_dowload_black" />
+
+
+                                <com.ias.gsscore.utils.CustomTextView
+                                    android:id="@+id/tvOrders"
+                                    style="@style/Poppins_Regular"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginLeft="10dp"
+                                    android:gravity="center_vertical"
+                                    android:text="My Downloads"
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@drawable/nav_view" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:layout_marginLeft="10dp"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="22dp"
+                                    android:layout_height="22dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/ic_bookmark_black" />
+
+
+                                <com.ias.gsscore.utils.CustomTextView
+                                    android:id="@+id/tvDoc"
+                                    style="@style/Poppins_Regular"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginLeft="10dp"
+                                    android:gravity="center_vertical"
+                                    android:text="My Bookmarks"
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@drawable/nav_view" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:layout_marginLeft="10dp"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/ic_wishlist_black" />
+
+                                <com.ias.gsscore.utils.CustomTextView
+                                    android:id="@+id/tvManage"
+                                    style="@style/Poppins_Regular"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginLeft="10dp"
+                                    android:clickable="true"
+                                    android:gravity="center_vertical"
+                                    android:text="My Wishlist"
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@drawable/nav_view" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:layout_marginLeft="10dp"
+                                android:orientation="horizontal"
+                                android:visibility="visible">
+
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/ic_order_black" />
+
+                                <com.ias.gsscore.utils.CustomTextView
+                                    android:id="@+id/orderlayout"
+                                    style="@style/Poppins_Regular"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginLeft="10dp"
+                                    android:clickable="true"
+                                    android:gravity="center_vertical"
+                                    android:text="My Orders"
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@drawable/nav_view" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:layout_marginLeft="10dp"
+                                android:orientation="horizontal"
+                                android:visibility="visible">
+
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/ic_material" />
+
+                                <com.ias.gsscore.utils.CustomTextView
+                                    android:id="@+id/tvPlans"
+                                    style="@style/Poppins_Regular"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginLeft="10dp"
+                                    android:clickable="true"
+                                    android:gravity="center_vertical"
+                                    android:text="Study Notes"
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@drawable/nav_view" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:layout_marginLeft="10dp"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/ic_resource_black" />
+
+                                <com.ias.gsscore.utils.CustomTextView
+                                    android:id="@+id/tvHistory"
+                                    style="@style/Poppins_Regular"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginLeft="10dp"
+                                    android:clickable="true"
+                                    android:gravity="center_vertical"
+                                    android:text="Resources"
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@drawable/nav_view" />
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:layout_marginLeft="10dp"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/ic_current_affair_black" />
+
+                                <com.ias.gsscore.utils.CustomTextView
+                                    android:id="@+id/tvSupport"
+                                    style="@style/Poppins_Regular"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginLeft="10dp"
+                                    android:clickable="true"
+                                    android:gravity="center_vertical"
+                                    android:text="Current Affairs"
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@drawable/nav_view" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="10dp"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/ic_notification" />
+
+                                <com.ias.gsscore.utils.CustomTextView
+                                    android:id="@+id/tvNotification"
+                                    style="@style/Poppins_Regular"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginLeft="10dp"
+                                    android:clickable="true"
+                                    android:gravity="center_vertical"
+                                    android:text="Topper\'s Corner"
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@drawable/nav_view" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:layout_marginLeft="10dp"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/ic_community_black" />
+
+                                <com.ias.gsscore.utils.CustomTextView
+                                    android:id="@+id/tvHowToUse"
+                                    style="@style/Poppins_Regular"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginLeft="10dp"
+                                    android:clickable="true"
+                                    android:gravity="center_vertical"
+                                    android:text="Community"
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp" />
+                            </LinearLayout>
+
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@drawable/nav_view" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:layout_marginLeft="10dp"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/ic_help_black" />
+
+                                <com.ias.gsscore.utils.CustomTextView
+                                    android:id="@+id/tvShare"
+                                    style="@style/Poppins_Regular"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginLeft="10dp"
+                                    android:gravity="center_vertical"
+                                    android:text="Help Support"
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp" />
+                            </LinearLayout>
+
+
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@drawable/nav_view" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:layout_marginLeft="10dp"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/ic_logout_black" />
+
+                                <com.ias.gsscore.utils.CustomTextView
+                                    android:id="@+id/tvLogout"
+                                    style="@style/Poppins_Regular"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginLeft="10dp"
+                                    android:gravity="center_vertical"
+                                    android:text="Logout"
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@drawable/nav_view" />
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+
+
+        </com.google.android.material.navigation.NavigationView>
+
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+
+</RelativeLayout>

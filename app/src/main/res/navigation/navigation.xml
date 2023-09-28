@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.ias.gsscore.ui.fragment.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/courseFragment"
+        android:name="com.ias.gsscore.ui.fragment.CourseFragment"
+        android:label="CourseFragment"
+        tools:layout="@layout/fragment_course">
+
+    </fragment>
+    <fragment
+        android:id="@+id/studyNotesFragment"
+        android:name="com.ias.gsscore.ui.fragment.StudyNotesFragment"
+        android:label="StudyNotesFragment"
+        tools:layout="@layout/fragment_study_notes" />
+
+    <fragment
+        android:id="@+id/materialFragment"
+        android:name="com.ias.gsscore.ui.fragment.MaterialFragment"
+        android:label="MaterialFragment"
+        tools:layout="@layout/fragment_material" />
+
+
+    <fragment
+        android:id="@+id/myAccountFragment"
+        android:name="com.ias.gsscore.ui.fragment.MyAccountFragment"
+        android:label="MyAccountFragment"
+        tools:layout="@layout/fragment_my_account" />
+
+    <fragment
+        android:id="@+id/myAccountTopListFragment"
+        android:name="com.ias.gsscore.ui.fragment.MyAccountTopListFragment"
+        android:label="MyAccountTopListFragment"
+        tools:layout="@layout/fragment_material" />
+
+    <fragment
+        android:id="@+id/studyNotesDetailsFragment"
+        android:name="com.ias.gsscore.ui.fragment.StudyNotesDetailsFragment"
+        android:label="StudyNotesDetailsFragment"
+        tools:layout="@layout/fragment_study_notes_details" />
+
+    <fragment
+        android:id="@+id/courseDetailsFragment"
+        android:name="com.ias.gsscore.ui.fragment.CourseDetailsFragment"
+        android:label="CourseDetailsFragment"
+        tools:layout="@layout/fragment_course_details" />
+
+</navigation>

@@ -1,0 +1,636 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/layout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <com.ias.gsscore.utils.CustomTextView
+                        android:id="@+id/tvTitle"
+                        style="@style/Poppins_SemiBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:text="Session 19 - Medieval History"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <com.ias.gsscore.utils.CustomTextView
+                                android:id="@+id/tvQuestionProgress"
+                                style="@style/Poppins_Regular"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                tools:text="Question 6/50"
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <ProgressBar
+                        android:id="@+id/progressBar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="12dp"
+                        android:layout_marginTop="5dp"
+                        android:max="100"
+                        android:progress="30"
+                        android:progressDrawable="@drawable/progress_bar_states_green" />
+
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/nav_view" />
+
+                <LinearLayout
+                    android:id="@+id/layout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="vertical"
+                    tools:ignore="WebViewLayout">
+
+                    <WebView
+                        android:id="@+id/tvQuestion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <WebView
+                        android:id="@+id/tvInstructions"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:visibility="visible"
+                    android:id="@+id/layout3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/curve_grey_stroke"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.ias.gsscore.utils.CustomTextView
+                            style="@style/Poppins_Medium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Correct Answer is "
+                            android:textColor="@color/text_color_333333"
+                            android:textSize="14sp" />
+
+                        <com.ias.gsscore.utils.CustomTextView
+                            android:id="@+id/tvCorrectAns"
+                            style="@style/Poppins_Medium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="A"
+                            android:textColor="@color/green"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:nestedScrollingEnabled="false"
+                        android:orientation="vertical"
+                        android:scrollbars="none"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:itemCount="4"
+                        tools:listitem="@layout/row_options_list" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/curve_grey_stroke"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:padding="5dp">
+
+                        <com.ias.gsscore.utils.CustomTextView
+                            style="@style/Poppins_Medium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="ATTEMPT : "
+                            android:textColor="@color/text_color_333333"
+                            android:textSize="14sp" />
+
+                        <com.ias.gsscore.utils.CustomTextView
+                            android:id="@+id/attemptType"
+                            style="@style/Poppins_Medium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="FLUKE"
+                            android:textColor="@color/red"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/bg_color"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:padding="5dp">
+                        <com.ias.gsscore.utils.CustomTextView
+                            android:id="@+id/attemptMessage"
+                            style="@style/Poppins_Regular"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="Incorrect attempt. However, ideally you should take 40 seconds to attempt this question and be careful in your strong areas too, to avoid silly errors during exam under pressure."
+                            android:textColor="@color/text_color_333333"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:visibility="visible"
+                    android:id="@+id/layout5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/curve_grey_stroke"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:padding="5dp">
+
+                        <com.ias.gsscore.utils.CustomTextView
+                            style="@style/Poppins_Medium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="You vs Topper"
+                            android:textColor="@color/text_color_333333"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/bg_color"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_marginVertical="5dp"
+                        android:padding="5dp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="100dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:background="@drawable/bg_top_corner_round_white_8dp"
+                                android:backgroundTint="@color/blue_text"
+                                android:gravity="center">
+
+                                <com.ias.gsscore.utils.CustomTextView
+                                    style="@style/Poppins_Medium"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="You"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="70dp"
+                                android:background="@drawable/bg_bottom_corner_round_white_8dp"
+                                android:backgroundTint="@color/line_color_light"
+                                android:gravity="center"
+                                android:layout_gravity="center">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+
+                                    <androidx.appcompat.widget.AppCompatImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:src="@drawable/ic_seconds_time"
+                                        android:layout_marginEnd="8dp"/>
+
+                                    <com.ias.gsscore.utils.CustomTextView
+                                        android:id="@+id/tvYou"
+                                        style="@style/Poppins_Medium"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        tools:text="4 sec"
+                                        android:textColor="@color/text_color_363636"
+                                        android:textSize="14sp" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="100dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:layout_marginHorizontal="8dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:background="@drawable/bg_top_corner_round_white_8dp"
+                                android:backgroundTint="@color/green"
+                                android:gravity="center">
+
+                                <com.ias.gsscore.utils.CustomTextView
+                                    style="@style/Poppins_Medium"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Topper"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="70dp"
+                                android:background="@drawable/bg_bottom_corner_round_white_8dp"
+                                android:backgroundTint="@color/line_color_light"
+                                android:gravity="center"
+                                android:layout_gravity="center">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+
+                                    <androidx.appcompat.widget.AppCompatImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:src="@drawable/ic_seconds_time"
+                                        android:layout_marginEnd="8dp"/>
+
+                                    <com.ias.gsscore.utils.CustomTextView
+                                        android:id="@+id/tvTopper"
+                                        style="@style/Poppins_Medium"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        tools:text="31 sec"
+                                        android:textColor="@color/text_color_363636"
+                                        android:textSize="14sp" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="100dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:background="@drawable/bg_top_corner_round_white_8dp"
+                                android:backgroundTint="@color/color_grey"
+                                android:gravity="center">
+
+                                <com.ias.gsscore.utils.CustomTextView
+                                    style="@style/Poppins_Medium"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Ideal Time"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="70dp"
+                                android:background="@drawable/bg_bottom_corner_round_white_8dp"
+                                android:backgroundTint="@color/line_color_light"
+                                android:gravity="center"
+                                android:layout_gravity="center">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+
+                                    <androidx.appcompat.widget.AppCompatImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:src="@drawable/ic_seconds_time"
+                                        android:layout_marginEnd="8dp"/>
+
+                                    <com.ias.gsscore.utils.CustomTextView
+                                        android:id="@+id/tvIdealTime"
+                                        style="@style/Poppins_Medium"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        tools:text="31-50 sec"
+                                        android:textColor="@color/text_color_363636"
+                                        android:textSize="14sp" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/curve_grey_stroke"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:padding="5dp">
+
+                        <com.ias.gsscore.utils.CustomTextView
+                            style="@style/Poppins_Medium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Question Status"
+                            android:textColor="@color/text_color_333333"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/bg_color"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                       android:layout_marginHorizontal="5dp"
+                        android:padding="5dp"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="5dp">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_star"
+                                android:layout_marginEnd="8dp"
+                                android:layout_marginTop="2dp"
+                                tools:ignore="TooDeepLayout" />
+
+                            <com.ias.gsscore.utils.CustomTextView
+                                style="@style/Poppins_Regular"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Topic : "
+                                android:textColor="@color/text_color_363636"
+                                android:textSize="14sp" />
+
+                            <com.ias.gsscore.utils.CustomTextView
+                                android:id="@+id/tvTopic"
+                                style="@style/Poppins_Regular"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                tools:text="Defence"
+                                android:textColor="@color/text_color_363636"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="5dp">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_sub_topic"
+                                android:layout_marginEnd="8dp"
+                                android:layout_marginTop="2dp"
+                                tools:ignore="TooDeepLayout" />
+
+                            <com.ias.gsscore.utils.CustomTextView
+                                style="@style/Poppins_Regular"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Sub Topic : "
+                                android:textColor="@color/text_color_363636"
+                                android:textSize="14sp" />
+
+                            <com.ias.gsscore.utils.CustomTextView
+                                android:id="@+id/tvSubTopic"
+                                style="@style/Poppins_Regular"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                tools:text="Defence Technology"
+                                android:textColor="@color/text_color_363636"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="5dp">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_sub_topic"
+                                android:layout_marginEnd="8dp"
+                                android:layout_marginTop="2dp"
+                                tools:ignore="TooDeepLayout" />
+
+                            <com.ias.gsscore.utils.CustomTextView
+                                style="@style/Poppins_Regular"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Difficulty Level : "
+                                android:textColor="@color/text_color_363636"
+                                android:textSize="14sp" />
+
+                            <com.ias.gsscore.utils.CustomTextView
+                                android:id="@+id/tvDifficultyLevel"
+                                style="@style/Poppins_Regular"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                tools:text="2"
+                                android:textColor="@color/text_color_363636"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="5dp">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_percentage"
+                                android:layout_marginEnd="8dp"
+                                android:layout_marginTop="2dp"
+                                tools:ignore="TooDeepLayout" />
+
+                            <com.ias.gsscore.utils.CustomTextView
+                                style="@style/Poppins_Regular"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Correct Percentage : "
+                                android:textColor="@color/text_color_363636"
+                                android:textSize="14sp" />
+
+                            <com.ias.gsscore.utils.CustomTextView
+                                android:id="@+id/tvCorrectPercentage"
+                                style="@style/Poppins_Regular"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                tools:text="0%"
+                                android:textColor="@color/text_color_363636"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/curve_grey_stroke"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:padding="5dp">
+
+                        <com.ias.gsscore.utils.CustomTextView
+                            style="@style/Poppins_Medium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Solution"
+                            android:textColor="@color/text_color_333333"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/bg_color"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:padding="5dp"
+                        tools:ignore="WebViewLayout">
+                        <WebView
+                            android:id="@+id/tvSolution"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+</layout>

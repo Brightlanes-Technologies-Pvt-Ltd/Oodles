@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#fff">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:id="@+id/mainLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:visibility="gone"
+            android:layout_margin="5dp"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.ias.gsscore.utils.CustomTextView
+                android:id="@+id/tvYear"
+                style="@style/Poppins_Medium"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                android:layout_weight="1"
+                android:textColor="@color/light_text_color"
+                android:textSize="14sp"
+                android:padding="3dp"
+                android:text="UPSC Previous Year: 2021" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:background="@drawable/curve_grey_stroke"
+                android:gravity="center"
+                android:padding="5dp"
+                android:layout_marginStart="5dp"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:layout_width="120dp"
+                    android:layout_height="match_parent"
+                    android:entries="@array/years"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ivLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:visibility="gone"
+            android:layout_marginEnd="10dp">
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/dummy_image3" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp"
+            android:background="@color/light_grey">
+
+            <com.ias.gsscore.utils.CustomTextView
+                android:id="@+id/tvName"
+                style="@style/Poppins_Medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:visibility="gone"
+                android:layout_margin="10dp"
+                android:text="Downloadable question Papers" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:id="@+id/rvDownload"
+                android:layout_margin="5dp"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:paddingBottom="60dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/row_books_download"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

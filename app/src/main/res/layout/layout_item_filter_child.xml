@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/childLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:weightSum="1"
+        android:gravity="center"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+      <com.ias.gsscore.utils.CustomTextView
+          android:id="@+id/txt_child"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:text="foundation classes"
+          android:layout_weight="0.8"
+          android:paddingStart="8dp"
+          android:textSize="14sp"
+          android:textColor="@color/text_color_333333"/>
+
+        <com.ias.gsscore.utils.CustomTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="38"
+            android:layout_weight="0.2"
+            android:textSize="14sp"
+            android:visibility="gone"
+            android:textColor="@color/text_color_333333"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/grey_text"/>
+
+
+</LinearLayout>

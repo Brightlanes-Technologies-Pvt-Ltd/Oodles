@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+            <com.ias.gsscore.utils.CustomTextView
+                android:id="@+id/tvName"
+                style="@style/Poppins_Medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Opportunity for practicing Elimination Skills"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <RadioButton
+                            android:id="@+id/radioBelowAverage"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/curve_black_stroke"
+                            android:buttonTint="@color/black"
+                            android:checked="false"
+                            android:layoutDirection="rtl"
+                            android:text="Below Average"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+
+                        <RadioButton
+                            android:id="@+id/radioAverage"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/curve_black_stroke"
+                            android:buttonTint="@color/black"
+                            android:checked="false"
+                            android:layoutDirection="rtl"
+                            android:text="Average"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <RadioButton
+                            android:id="@+id/radioGood"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/curve_blue_stroke"
+                            android:buttonTint="@color/blue_text"
+                            android:checked="false"
+                            android:layoutDirection="rtl"
+                            android:text="Good"
+                            android:textAlignment="center"
+                            android:textColor="@color/blue_text"
+                            android:textSize="14sp" />
+
+                        <RadioButton
+                            android:id="@+id/radioExcellent"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/curve_green_stroke"
+                            android:buttonTint="@color/green"
+                            android:checked="false"
+                            android:layoutDirection="rtl"
+                            android:text="Excellent"
+                            android:textAlignment="center"
+                            android:textColor="@color/green"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:id="@+id/layoutMain"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/bg_questions"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <com.ias.gsscore.utils.CustomTextView
+            android:id="@+id/tvQuestionNo"
+            style="@style/Poppins_Regular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="50"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+
+</layout>

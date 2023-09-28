@@ -1,0 +1,5 @@
+# Project exclude paths
+/commonlib/build/
+/mobilertc/build/
+/zoom/build/
+/zoom/build/intermediates/javac/debug/classes/

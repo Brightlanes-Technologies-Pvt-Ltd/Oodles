@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewmodel"
+            type="com.ias.gsscore.ui.viewmodel.PersonalProfileViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/light_grey">
+
+        <LinearLayout
+            android:id="@+id/layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <include layout="@layout/header_back"
+                android:id="@+id/headerBack"/>
+        </LinearLayout>
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/layout">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <LinearLayout
+                    android:id="@+id/layoutMessaging"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="10dp">
+
+                    <com.ias.gsscore.utils.CustomTextView
+                        style="@style/Poppins_Medium"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_weight="1"
+                        android:text="Profile"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutPrivacyChat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/layoutMessaging"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="10dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_marginLeft="10dp"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                  android:layout_gravity="center"
+                                    android:src="@drawable/ic_user" />
+
+                                <com.ias.gsscore.utils.CustomTextView
+                                    style="@style/Poppins_Medium"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginStart="20dp"
+                                    android:text="Name "
+                                    android:gravity="center"
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp" />
+
+                                <com.ias.gsscore.utils.CustomEditText
+                                    android:id="@+id/name"
+                                    style="@style/Poppins_Regular"
+                                    android:layout_width="0dp"
+                                    android:layout_height="40dp"
+                                    android:layout_marginEnd="20dp"
+                                    android:layout_weight="1"
+                                    android:paddingLeft="20dp"
+                                    android:gravity="center_vertical"
+                                    android:layout_gravity="center"
+                                    android:background="@android:color/transparent"
+                                    android:text="Himanshi Gaur"
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp" />
+
+                                <LinearLayout
+                                    android:id="@+id/edit_name"
+                                    android:layout_width="40dp"
+                                    android:gravity="center"
+                                    android:layout_height="40dp">
+                                    <ImageView
+                                        android:layout_width="12dp"
+                                        android:layout_height="12dp"
+                                        android:layout_gravity="center"
+                                        android:src="@drawable/profile_edit" />
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="5dp"
+                                android:background="@color/line_color_light" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:padding="10dp">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="2dp"
+                                    android:src="@drawable/ic_call" />
+
+                                <com.ias.gsscore.utils.CustomTextView
+                                    style="@style/Poppins_Medium"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginStart="20dp"
+                                    android:text="Mobile Number "
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp" />
+
+                                <com.ias.gsscore.utils.CustomTextView
+                                    android:id="@+id/mobile"
+                                    style="@style/Poppins_Regular"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginEnd="20dp"
+                                    android:layout_weight="1"
+                                    android:text=": 7289960790"
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp" />
+
+                                <ImageView
+                                    android:layout_width="12dp"
+                                    android:layout_height="12dp"
+                                    android:layout_gravity="center" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="5dp"
+                                android:background="@color/line_color_light" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_height="match_parent">
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                       android:layout_gravity="center"
+                                        android:src="@drawable/ic_display_name" />
+
+                                    <com.ias.gsscore.utils.CustomTextView
+                                        style="@style/Poppins_Medium"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginStart="20dp"
+                                        android:text="Display Name "
+                                        android:gravity="center"
+                                        android:textColor="@color/black"
+                                        android:textSize="14sp" />
+
+                                    <com.ias.gsscore.utils.CustomEditText
+                                        android:id="@+id/dis_name"
+                                        style="@style/Poppins_Regular"
+                                        android:layout_width="0dp"
+                                        android:background="@android:color/transparent"
+                                        android:layout_height="40dp"
+                                        android:layout_gravity="center"
+                                        android:paddingLeft="20dp"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_marginEnd="20dp"
+                                        android:layout_weight="1"
+                                        android:text="Himanshi Gaur"
+                                        android:textColor="@color/black"
+                                        android:textSize="14sp" />
+
+                                    <LinearLayout
+                                        android:id="@+id/dis_edit"
+                                        android:layout_width="40dp"
+                                        android:gravity="center"
+                                        android:layout_height="40dp">
+
+                                    <ImageView
+                                        android:layout_width="12dp"
+                                        android:layout_height="12dp"
+                                        android:layout_gravity="center"
+                                        android:src="@drawable/profile_edit" />
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_marginTop="5dp"
+                                    android:background="@color/line_color_light" />
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:padding="10dp">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="2dp"
+                                    android:src="@drawable/ic_email" />
+
+                                <com.ias.gsscore.utils.CustomTextView
+                                    style="@style/Poppins_Medium"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="20dp"
+                                    android:text="Email "
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp" />
+
+                                <com.ias.gsscore.utils.CustomTextView
+                                    android:id="@+id/email"
+                                    style="@style/Poppins_Regular"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="20dp"
+                                    android:layout_weight="1"
+                                    android:text=": HimanshiGaur68@gmail.com"
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp" />
+
+                                <ImageView
+                                    android:layout_width="12dp"
+                                    android:layout_height="12dp"
+                                    android:layout_gravity="center" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutAssignations"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/layoutPrivacyChat"
+                    android:gravity="center"
+                    android:padding="10dp">
+
+                    <com.ias.gsscore.utils.CustomTextView
+                        style="@style/Poppins_Medium"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_weight="1"
+                        android:text="Other"
+                        android:visibility="gone"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutAssigned"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/layoutAssignations"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="10dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone"
+                                android:padding="10dp">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="2dp"
+                                    android:src="@drawable/ic_information" />
+
+                                <com.ias.gsscore.utils.CustomTextView
+                                    style="@style/Poppins_Medium"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginStart="20dp"
+                                    android:text="Information "
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp" />
+
+                                <com.ias.gsscore.utils.CustomTextView
+                                    style="@style/Poppins_Regular"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginEnd="20dp"
+                                    android:layout_weight="1"
+                                    android:ellipsize="end"
+                                    android:text=": Ethics, Essay and General Que.."
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp" />
+
+                                <ImageView
+                                    android:layout_width="12dp"
+                                    android:layout_height="12dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/profile_edit" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="5dp"
+                                android:background="@color/line_color_light" />
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone"
+                                android:padding="10dp">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="2dp"
+                                    android:src="@drawable/ic_assigned_course" />
+
+                                <com.ias.gsscore.utils.CustomTextView
+                                    style="@style/Poppins_Medium"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginStart="20dp"
+                                    android:layout_weight="1"
+                                    android:text="Private Chat Link "
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp" />
+
+                                <ImageView
+                                    android:layout_width="16dp"
+                                    android:layout_height="16dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginEnd="5dp"
+                                    android:src="@drawable/ic_share"
+                                    app:tint="@color/blue_text" />
+
+                                <com.ias.gsscore.utils.CustomTextView
+                                    style="@style/Poppins_Regular"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_marginEnd="20dp"
+                                    android:text="Copy Link"
+                                    android:textColor="@color/blue_text"
+                                    android:textSize="14sp" />
+
+
+                                <ImageView
+                                    android:layout_width="16dp"
+                                    android:layout_height="16dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginEnd="5dp"
+                                    android:src="@drawable/ic_share"
+                                    app:tint="@color/blue_text" />
+
+                                <com.ias.gsscore.utils.CustomTextView
+                                    style="@style/Poppins_Regular"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginStart="5dp"
+                                    android:text="Share"
+                                    android:textColor="@color/blue_text"
+                                    android:textSize="14sp" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+
+            </RelativeLayout>
+        </ScrollView>
+        <com.ias.gsscore.utils.CustomTextView
+            android:id="@+id/update"
+            style="@style/Poppins_SemiBold"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:text="Update Profile"
+            android:gravity="center"
+            android:textColor="#fff"
+            android:textSize="16sp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/curve_blue_solid"/>
+
+
+    </RelativeLayout>
+
+</layout>

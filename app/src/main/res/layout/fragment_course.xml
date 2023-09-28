@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewmodel"
+            type="com.ias.gsscore.ui.viewmodel.CourseFragmentViewModel" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <LinearLayout
+                android:id="@+id/layout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:visibility="visible"
+                android:orientation="horizontal">
+
+                <com.ias.gsscore.utils.CustomTextView
+                    style="@style/Poppins_Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Latest Courses"
+                    android:textColor="#000"
+                    android:textSize="16sp" />
+
+                <com.ias.gsscore.utils.CustomTextView
+                    style="@style/Poppins_Medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="View All"
+                    android:visibility="gone"
+                    android:textColor="@color/blue_text"
+                    android:textSize="14sp" />
+
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvLatestCourseList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout1"
+                android:adapter="@{viewmodel.adapterLatestCourse}"
+                android:clipToPadding="false"
+                android:orientation="horizontal"
+                android:overScrollMode="never"
+                android:visibility="@{viewmodel.isVisibleLatestCourseRv==1?View.VISIBLE:View.GONE}"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:spanCount="4"
+                tools:itemCount="4"
+                tools:listitem="@layout/layout_latest_course_list" />
+
+            <LinearLayout
+                android:id="@+id/layout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_below="@+id/rvLatestCourseList"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.ias.gsscore.utils.CustomTextView
+                    style="@style/Poppins_Medium"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="IAS SCORE Courses"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <com.ias.gsscore.utils.CustomTextView
+                    style="@style/Poppins_Regular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Filter"
+                    android:onClick="@{()->viewmodel.clickFilter()}"
+                    android:textColor="@color/blue_text"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvCourseList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout2"
+                android:adapter="@{viewmodel.courseAdapter}"
+                android:visibility="@{viewmodel.isVisibleCourseRv==1?View.VISIBLE:View.GONE}"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:itemCount="2"
+                tools:listitem="@layout/layout_course_list" />
+
+            <com.ias.gsscore.utils.CustomTextView
+                android:id="@+id/tvNoData"
+                style="@style/Poppins_Medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout2"
+                android:layout_marginTop="120dp"
+                android:gravity="center"
+                android:text="No Record exist...!!!"
+                android:textColor="#FF5533"
+                android:textSize="16sp"
+                android:visibility="@{viewmodel.isVisibleCourseRv==1?View.GONE:View.VISIBLE}"
+                tools:visibility="gone" />
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</layout>

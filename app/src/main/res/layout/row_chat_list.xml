@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layoutDirection="ltr">
+
+        <RelativeLayout
+            android:id="@+id/layout_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp">
+
+                <RelativeLayout
+                    android:id="@+id/cardView2"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:layout_centerVertical="true">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <com.ias.gsscore.utils.RoundedView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:bottomLeftCornerRadius="10dp"
+                            app:bottomRightCornerRadius="10dp"
+                            app:topLeftCornerRadius="10dp"
+                            app:topRightCornerRadius="10dp">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/img_profile"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:background="@drawable/ic_card_placeholder"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/dummy_image5" />
+
+                        </com.ias.gsscore.utils.RoundedView>
+
+                    </RelativeLayout>
+
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:src="@drawable/circle"
+                        app:tint="#009A0F" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/cardView2"
+                    android:padding="12dp">
+
+                    <com.ias.gsscore.utils.CustomTextView
+                        android:id="@+id/tvName"
+                        style="@style/Poppins_Medium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:ellipsize="end"
+                        android:includeFontPadding="false"
+                        android:lines="1"
+                        android:text="Piyush Bokolia"
+                        android:textColor="@color/text_color_333333"
+                        android:textSize="14sp" />
+
+                    <com.ias.gsscore.utils.CustomTextView
+                        android:id="@+id/txtMsg"
+                        style="@style/Poppins_Regular"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvName"
+                        android:layout_marginTop="2dp"
+                        android:ellipsize="end"
+                        android:includeFontPadding="false"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:text='Hello Sir'
+                        android:textColor="@color/text_color_666666"
+                        android:textSize="12sp" />
+
+                    <LinearLayout
+                        android:id="@+id/right_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <com.ias.gsscore.utils.CustomTextView
+                                android:id="@+id/txt_time"
+                                style="@style/Poppins_Regular"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:includeFontPadding="false"
+                                android:text="1:03 PM"
+                                android:textColor="@color/msg_count"
+                                android:textSize="12sp" />
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/txt_time"
+                                android:layout_alignParentEnd="true"
+                                android:layout_gravity="end"
+                                android:layout_marginTop="3dp"
+                                android:background="@drawable/circle_msg_count"
+                                app:tint="#009A0F">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tv_msg_count"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="end"
+                                    android:layout_marginHorizontal="7dp"
+                                    android:layout_marginVertical="4dp"
+                                    android:gravity="center"
+                                    android:includeFontPadding="false"
+                                    android:text="1"
+                                    android:textColor="@color/white"
+                                    android:textSize="12dp" />
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="20dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/ic_video_call" />
+
+
+                    </LinearLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/layout_main"
+            android:layout_marginHorizontal="5dp"
+            android:background="@color/line_color_light" />
+
+    </RelativeLayout>
+
+</layout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="fontType" format="enum">
+        <enum name="Poppins_Bold" value="0" />
+        <enum name="Poppins_Light" value="1" />
+        <enum name="Poppins_Medium" value="2" />
+        <enum name="Poppins_Regular" value="3" />
+        <enum name="Poppins_SemiBold" value="4" />
+        <enum name="Poppins_Thin" value="5" />
+    </attr>
+
+    <declare-styleable name="BuzzFonts">
+        <attr name="fontType"/>
+    </declare-styleable>
+
+    <declare-styleable name="RoundedView">
+        <attr name="topLeftCornerRadius" format="dimension" />
+        <attr name="topRightCornerRadius" format="dimension" />
+        <attr name="bottomLeftCornerRadius" format="dimension" />
+        <attr name="bottomRightCornerRadius" format="dimension" />
+    </declare-styleable>
+
+</resources>

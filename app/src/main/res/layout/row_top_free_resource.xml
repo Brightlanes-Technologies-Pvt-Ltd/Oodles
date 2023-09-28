@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="3dp"
+    android:layout_marginEnd="3dp">
+
+
+    <LinearLayout
+        android:id="@+id/layoutButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_bg_light_blue"
+        android:gravity="center">
+
+        <com.ias.gsscore.utils.CustomTextView
+            style="@style/Poppins_Regular"
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="16sp"
+            android:textColor="#fff"
+           
+            tools:text="Report &amp; Magazines" />
+
+    </LinearLayout>
+</LinearLayout>
